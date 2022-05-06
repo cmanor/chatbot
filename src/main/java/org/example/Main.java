@@ -7,10 +7,11 @@ public class Main {
 //        greeting();
 //        String name = repeatName();
 //        int age = ageGuess();
-//        int count = counting();
+        int count = counting();
 //        String answer = knowledge();
 //        story(name, age, count, answer);
-        counting();
+        System.out.println(count);
+
 
     }
     public static void greeting() {
@@ -26,13 +27,13 @@ public class Main {
     public static int ageGuess() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Wanna play a game? ");
-        String response = scanner.nextLine();
+        scanner.nextLine();
         System.out.println("Rhetorical question. We're playing one.");
         System.out.println("I bet I can guess your age. If I guess it correctly, type \"yes\". By the way, we're doing this until I get it right.");
         while(true) {
             int guess = (int)(Math.random() * 100);
             System.out.println("Is it " + guess + "?");
-            response = scanner.nextLine();
+            String response = scanner.nextLine();
             if (response.equals("yes")) {
                 System.out.println("Hell yeah, first try.");
                 return guess;
@@ -46,12 +47,11 @@ public class Main {
         while(input <2) {
             System.out.println(" I said greater than one");
             input = Integer.parseInt(scanner.nextLine());
-            if (input > 1) {
-                for (int i = 1; i <= input; i++) {
-                    System.out.println(i);
-                }
-            }
-        }return input;
+        }
+        for (int i = 1; i <= input; i++) {
+            System.out.println(i);
+        }
+        return input;
     }
     public static String knowledge() {
         Scanner scanner = new Scanner(System.in);
