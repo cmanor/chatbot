@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-//        greeting();
-//        String name = repeatName();
-//        int age = ageGuess();
-//        int count = counting();
-//        String answer = knowledge();
-//        story(name, age, count, answer);
+        greeting();
+        String name = repeatName();
+        int age = ageGuess();
+        int count = counting();
+        String answer = knowledge();
+        story(name, age, count, answer);
         dayOfWeek();
 
 
@@ -24,6 +24,7 @@ public class Main {
         String name = scanner.nextLine().trim();
         System.out.println("Cool name bro.");
 
+        scanner.close();
         return name;
     }
     public static int ageGuess() {
@@ -43,6 +44,7 @@ public class Main {
             if (response.equals("yes")) {
                 System.out.println("Hell yeah, first try.");
 
+                scanner.close();
                 return guess;
             }
         }
@@ -60,6 +62,7 @@ public class Main {
         for (int i = 1; i <= input; i++) {
             System.out.println(i);
         }
+        scanner.close();
         return input;
     }
     public static String knowledge() {
@@ -76,6 +79,7 @@ public class Main {
 
             if (answer.equals("B")){
                 System.out.println("Good job! You did it!");
+                scanner.close();
                 return answer;
 
             } else
@@ -83,6 +87,11 @@ public class Main {
         }
     }
     public static void story(String nameResult, int ageResult, int countResult, String knowledgeResult) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Would you like to hear a story?");
+        scanner.nextLine();
+        scanner.close();
+        System.out.println("Again, that was rhetorical. I don't care what you think. I am a computer.");
         System.out.println("This is the story of " + nameResult + "."
         + "They are definitely " + ageResult + " years old and totally didn't lie about it to stop me guessing their age anymore." + "\n"
                 + " Surprisingly, " + nameResult + " can count all the way to " + countResult + ", provided they are assisted by a computer." + "\n"
@@ -107,6 +116,6 @@ public class Main {
                     case "sunday" -> System.out.println("Sundays are fine, I guess.");
                     default -> System.out.println("learn how to spell, moron");
             }
-        }
+        }scanner.close();
     }
 }
