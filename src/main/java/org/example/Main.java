@@ -7,10 +7,10 @@ public class Main {
 //        greeting();
 //        String name = repeatName();
 //        int age = ageGuess();
-        int count = counting();
+//        int count = counting();
 //        String answer = knowledge();
 //        story(name, age, count, answer);
-        System.out.println(count);
+        dayOfWeek();
 
 
     }
@@ -19,23 +19,30 @@ public class Main {
     }
     public static String repeatName() {
         Scanner scanner = new Scanner(System.in);
+
         System.out.print("Uh...what did you say your name was again? ");
         String name = scanner.nextLine().trim();
         System.out.println("cool name bro");
+
         return name;
     }
     public static int ageGuess() {
         Scanner scanner = new Scanner(System.in);
+
         System.out.print("Wanna play a game? ");
         scanner.nextLine();
         System.out.println("Rhetorical question. We're playing one.");
         System.out.println("I bet I can guess your age. If I guess it correctly, type \"yes\". By the way, we're doing this until I get it right.");
+
         while(true) {
+
             int guess = (int)(Math.random() * 100);
             System.out.println("Is it " + guess + "?");
             String response = scanner.nextLine();
+
             if (response.equals("yes")) {
                 System.out.println("Hell yeah, first try.");
+
                 return guess;
             }
         }
@@ -43,11 +50,13 @@ public class Main {
     public static int counting() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Now enter a number greater than 1 and I'll count to it");
+
         int input = Integer.parseInt(scanner.nextLine());
         while(input <2) {
             System.out.println(" I said greater than one");
             input = Integer.parseInt(scanner.nextLine());
         }
+
         for (int i = 1; i <= input; i++) {
             System.out.println(i);
         }
@@ -68,6 +77,7 @@ public class Main {
             if (answer.equals("B")){
                 System.out.println("Good job! You did it!");
                 return answer;
+
             } else
                 System.out.println("wrong, try again");
         }
@@ -82,6 +92,18 @@ public class Main {
     }
     public static void dayOfWeek() {
         Scanner scanner = new Scanner(System.in);
-
+        System.out.println("Ask me how I feel about different days of the week!");
+        System.out.println("Type a day of the week or \"quit\" to close the program");
+        String input = scanner.nextLine().toLowerCase();
+        switch (input) {
+            case "monday" -> System.out.println("monday");
+            case "tuesday" -> System.out.println("tuesday");
+            case "wednesday" -> System.out.println("wednesday");
+            case "thursday" -> System.out.println("thursday");
+            case "friday" -> System.out.println("friday");
+            case "saturday" -> System.out.println("saturday");
+            case "sunday" -> System.out.println("sunday");
+            default -> System.out.println("learn how to spell, moron");
+        }
     }
 }
