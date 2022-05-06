@@ -22,7 +22,7 @@ public class Main {
 
         System.out.print("Uh...what did you say your name was again? ");
         String name = scanner.nextLine().trim();
-        System.out.println("cool name bro");
+        System.out.println("Cool name bro.");
 
         return name;
     }
@@ -49,7 +49,7 @@ public class Main {
     }
     public static int counting() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Now enter a number greater than 1 and I'll count to it");
+        System.out.println("Now enter a number greater than 1 and I'll count to it.");
 
         int input = Integer.parseInt(scanner.nextLine());
         while(input <2) {
@@ -95,16 +95,16 @@ public class Main {
         System.out.println("Ask me how I feel about different days of the week!");
         String input ="";
         while (!input.equals("quit")){
-            System.out.println("Type a day of the week or \"quit\" to close the program");
+            System.out.println("Type a day of the week or \"quit\" to close the program.");
             input = scanner.nextLine().toLowerCase();
                 switch (input) {
-                    case "monday" -> System.out.println("monday");
-                    case "tuesday" -> System.out.println("tuesday");
-                    case "wednesday" -> System.out.println("wednesday");
-                    case "thursday" -> System.out.println("thursday");
-                    case "friday" -> System.out.println("friday");
-                    case "saturday" -> System.out.println("saturday");
-                    case "sunday" -> System.out.println("sunday");
+                    case "monday" -> System.out.println("You don't hate Mondays. You hate capitalism.");
+                    case "tuesday" -> System.out.println("Apparently the least crowded time to shop at Costco in the evening.");
+                    case "wednesday" -> System.out.println("Kind of feels like Friday when you work from home Thursday/Friday.");
+                    case "thursday" -> System.out.println("I get to work from home. It's dope.");
+                    case "friday" -> System.out.println("Who doesn't love Friday?");
+                    case "saturday" -> System.out.println("Finally, some time to relax.");
+                    case "sunday" -> System.out.println("Sundays are fine, I guess.");
                     default -> System.out.println("learn how to spell, moron");
             }
         }
