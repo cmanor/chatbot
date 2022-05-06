@@ -4,28 +4,30 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        greeting();
-        repeatName();
-        ageGuess();
-        counting();
-        knowledge();
+//        greeting();
+        String name = repeatName();
+//        ageGuess();
+//        counting();
+//        knowledge();
+        story(name);
 
     }
     public static void greeting() {
         System.out.println("sup");
     }
-    public static void repeatName() {
+    public static String repeatName() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Uh...what did you say your name was again? ");
         String name = scanner.nextLine();
         System.out.println("cool name bro");
+        return name;
     }
     public static void ageGuess() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Wanna play a game? ");
         String response = scanner.nextLine();
         System.out.println("Rhetorical question. We're playing one.");
-        System.out.println("I bet I can guess your age. If I guess it right type \"yes\". By the way, we're doing this until I get it right.");
+        System.out.println("I bet I can guess your age. If I guess it correctly, type \"yes\". By the way, we're doing this until I get it right.");
         while(true) {
             System.out.println("Is it " + (int)(Math.random() * 100) + "?");
             response = scanner.nextLine();
@@ -68,10 +70,11 @@ public class Main {
                 System.out.println("wrong, try again");
         }
     }
-    public static void story() {
-        Scanner scanner = new Scanner(System.in);
+    public static void story(String nameResult) {
+        System.out.println("This is the story of " + nameResult);
 
-    }public static void dayOfWeek() {
+    }
+    public static void dayOfWeek() {
         Scanner scanner = new Scanner(System.in);
 
     }
