@@ -24,7 +24,7 @@ public class Main {
         String name = scanner.nextLine().trim();
         System.out.println("Cool name bro.");
 
-        scanner.close();
+//        scanner.close();
         return name;
     }
     public static int ageGuess() {
@@ -44,7 +44,7 @@ public class Main {
             if (response.equals("yes")) {
                 System.out.println("Hell yeah, first try.");
 
-                scanner.close();
+//                scanner.close();
                 return guess;
             }
         }
@@ -62,7 +62,7 @@ public class Main {
         for (int i = 1; i <= input; i++) {
             System.out.println(i);
         }
-        scanner.close();
+//        scanner.close();
         return input;
     }
     public static String knowledge() {
@@ -79,7 +79,7 @@ public class Main {
 
             if (answer.equals("B")){
                 System.out.println("Good job! You did it!");
-                scanner.close();
+//                scanner.close();
                 return answer;
 
             } else
@@ -90,7 +90,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Would you like to hear a story?");
         scanner.nextLine();
-        scanner.close();
+//        scanner.close();
         System.out.println("Again, that was rhetorical. I don't care what you think. I am a computer.");
         System.out.println("This is the story of " + nameResult + "."
         + "They are definitely " + ageResult + " years old and totally didn't lie about it to stop me guessing their age anymore." + "\n"
@@ -116,6 +116,7 @@ public class Main {
                     case "sunday" -> System.out.println("Sundays are fine, I guess.");
                     default -> System.out.println("learn how to spell, moron");
             }
-        }scanner.close();
+//            scanner.close();
+        }
     }
 }
