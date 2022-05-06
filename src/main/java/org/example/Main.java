@@ -93,17 +93,20 @@ public class Main {
     public static void dayOfWeek() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ask me how I feel about different days of the week!");
-        System.out.println("Type a day of the week or \"quit\" to close the program");
-        String input = scanner.nextLine().toLowerCase();
-        switch (input) {
-            case "monday" -> System.out.println("monday");
-            case "tuesday" -> System.out.println("tuesday");
-            case "wednesday" -> System.out.println("wednesday");
-            case "thursday" -> System.out.println("thursday");
-            case "friday" -> System.out.println("friday");
-            case "saturday" -> System.out.println("saturday");
-            case "sunday" -> System.out.println("sunday");
-            default -> System.out.println("learn how to spell, moron");
+        String input ="";
+        while (!input.equals("quit")){
+            System.out.println("Type a day of the week or \"quit\" to close the program");
+            input = scanner.nextLine().toLowerCase();
+                switch (input) {
+                    case "monday" -> System.out.println("monday");
+                    case "tuesday" -> System.out.println("tuesday");
+                    case "wednesday" -> System.out.println("wednesday");
+                    case "thursday" -> System.out.println("thursday");
+                    case "friday" -> System.out.println("friday");
+                    case "saturday" -> System.out.println("saturday");
+                    case "sunday" -> System.out.println("sunday");
+                    default -> System.out.println("learn how to spell, moron");
+            }
         }
     }
 }
