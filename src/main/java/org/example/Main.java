@@ -114,6 +114,7 @@ public class Main {
                     case "friday" -> System.out.println("Who doesn't love Friday?");
                     case "saturday" -> System.out.println("Finally, some time to relax.");
                     case "sunday" -> System.out.println("Sundays are fine, I guess.");
+                    case "quit" -> System.out.println("Fine, I didn't want to tell you, anyway.");
                     default -> System.out.println("learn how to spell, moron");
             }
 //            scanner.close();
